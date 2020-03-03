@@ -14,13 +14,13 @@ AddEncoding gzip svgz
 <IfModule mod_autoindex.c>
 
   # SET INDEX OPTIONS
-  IndexOptions IgnoreCase FancyIndexing HTMLTable SuppressHTMLPreamble FoldersFirst VersionSort NameWidth=* DescriptionWidth=* XHTML IconHeight=16 IconWidth=16
+  IndexOptions IgnoreCase FancyIndexing HTMLTable SuppressHTMLPreamble FoldersFirst VersionSort NameWidth=* DescriptionWidth=* XHTML IconHeight=16 IconWidth=16 Charset=UTF-8
 
   # Other options.
   # IconsAreLinks SuppressColumnSorting
 
   # SET DISPLAY ORDER
-  IndexOrderDefault Ascending Name
+  IndexOrderDefault Descending Name
 
   IndexStyleSheet /fancy-index/style.css
 

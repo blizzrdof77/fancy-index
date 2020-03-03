@@ -50,9 +50,9 @@
     let titleText;
 
     if (path) {
-      const parts = path.split('/');
-      path = parts[parts.length - 1];
-      titleText = titleize(path).replace(/-|_/g, ' ');
+      //const parts = path.split('/');
+      //path = parts[parts.length - 1];
+      titleText = path;//titleize(path).replace(/-|_/g, ' ');
     } else {
       titleText = window.location.host;
     }
@@ -65,7 +65,7 @@
     h1.appendChild(document.createTextNode(titleText));
     container.appendChild(h1);
 
-    document.body.insertBefore(container, document.body.firstChild);
+    document.body.insertBefore(container, document.getElementById("indexlist"));
     document.title = titleText;
   }
 
@@ -148,7 +148,7 @@
     const input = document.createElement('input');
     input.type = 'search';
     input.id = 'search';
-    input.setAttribute('placeholder', 'Search');
+    input.setAttribute('placeholder', 'Filter');
     document.getElementById('page-header').appendChild(input);
 
     const sortColumns = Array.from(document.querySelectorAll('thead a'));
